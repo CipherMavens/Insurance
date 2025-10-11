@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Shield, Heart } from 'lucide-react';
 
 const LandingPage = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+ // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showAccountModal, setShowAccountModal] = useState(false);
   const [showProductSelection, setShowProductSelection] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState('');
