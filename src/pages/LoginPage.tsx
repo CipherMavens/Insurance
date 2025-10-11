@@ -1,9 +1,10 @@
+
 import React, { useState } from 'react';
 
-// Define the structure for the component's props if needed, though not strictly necessary for this static form.
+
 interface CreateAccountFormProps {}
 
-const CreateAccountForm: React.FC<CreateAccountFormProps> = () => {
+const Login: React.FC<CreateAccountFormProps> = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -124,4 +125,4 @@ const CreateAccountForm: React.FC<CreateAccountFormProps> = () => {
   );
 };
 
-export default CreateAccountForm;
+export default Login;
