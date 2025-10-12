@@ -7,6 +7,8 @@ import AccountVerification from './pages/AccountVerification';
 import InsuranceCompanyDashboard from './pages/InsuranceCompanyDasboard';
 import CommissionAnalytics from './pages/CommissionAnalytics';
 import ClientMandate from './pages/ClientMandate';
+import CancelMandate from './pages/CancelMandate';
+import MobileMoneyContribution from './pages/MobileMoneyContribution';
 import ClientOnboardingInsurance from './pages/ClientOnboardingInsurance';
 import AgentManagement  from './pages/AgentManagement';
 import './App.css';
@@ -24,6 +26,8 @@ function App() {
           <Route path="/insurance-dashboard" element={<InsuranceCompanyDashboard />} />
           <Route path="/commission-analytics" element={<CommissionAnalytics />} />
           <Route path="/client-mandate" element={<ClientMandate />} />
+          <Route path="/cancel-mandate" element={<CancelMandate />} />
+          <Route path="/mobile-money-payment" element={<MobileMoneyContribution />} />
           <Route path="/client-onboarding" element={<ClientOnboardingInsurance />} />
           <Route path="/client-onboarding" element={<ClientOnboardingInsurance />} />
           <Route path="/client-onboarding" element={<ClientOnboardingInsurance />} />

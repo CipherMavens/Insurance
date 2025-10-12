@@ -254,6 +254,7 @@ export default function ClientPolicyDashboard() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     value={selectedPolicy}
                     onChange={(e) => setSelectedPolicy(e.target.value)}
+                    aria-label="Choose a policy"
                   >
                     <option value="">Select policy...</option>
                     {policies.map(p => (
@@ -268,6 +269,7 @@ export default function ClientPolicyDashboard() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     value={paymentMethod}
                     onChange={(e) => setPaymentMethod(e.target.value)}
+                    aria-label="Choose payment method"
                   >
                     <option value="">Select method...</option>
                     <option value="Credit Card">Credit Card</option>
@@ -316,7 +318,7 @@ export default function ClientPolicyDashboard() {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Choose a policy</label>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Choose a policy">
                     <option>Select policy...</option>
                     {policies.map(p => (
                       <option key={p.policyId} value={p.policyId}>{p.policyId} - {p.type}</option>
@@ -330,6 +332,7 @@ export default function ClientPolicyDashboard() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     value={documentType}
                     onChange={(e) => setDocumentType(e.target.value)}
+                    aria-label="Document Type"
                   >
                     <option value="">Select document...</option>
                     <option value="Policy Document">Policy Document</option>
@@ -341,7 +344,7 @@ export default function ClientPolicyDashboard() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Choose document type</label>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Choose document type">
                     <option>Select type...</option>
                     <option>PDF</option>
                     <option>Excel</option>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   FileText,
   Home,
@@ -27,7 +27,7 @@ const ClientMandate = () => {
     agreeToTerms: false,
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -290,6 +290,7 @@ const ClientMandate = () => {
                       value={formData.paymentFrequency}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      aria-label="Payment Frequency"
                     >
                       <option value="monthly">Monthly</option>
                       <option value="quarterly">Quarterly</option>
@@ -307,6 +308,7 @@ const ClientMandate = () => {
                       value={formData.mandateStartDate}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      aria-label="Mandate Start Date"
                     />
                   </div>
                   <div>
@@ -319,6 +321,7 @@ const ClientMandate = () => {
                       value={formData.mandateEndDate}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      aria-label="Mandate End Date"
                     />
                   </div>
                 </div>
