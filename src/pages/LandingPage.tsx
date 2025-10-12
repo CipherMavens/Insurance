@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Shield, Heart } from 'lucide-react';
+import { Shield, Heart, Car, Building2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // ...inside your LandingPage return...
@@ -42,6 +42,32 @@ const LandingPage = () => {
         "Premium Cashback Options"
       ],
       color: "bg-red-50"
+    },
+    {
+      company: "UAP",
+      type: "Motor Insurance",
+      icon: Car,
+      description: "Comprehensive motor vehicle insurance coverage with 24/7 roadside assistance and quick claims processing.",
+      benefits: [
+        "Third Party & Comprehensive Cover",
+        "24/7 Roadside Assistance",
+        "Quick Claims Processing",
+        "No Claim Bonus Protection"
+      ],
+      color: "bg-blue-50"
+    },
+    {
+      company: "Prudential",
+      type: "Property Insurance",
+      icon: Building2,
+      description: "Protect your valuable property and assets with comprehensive coverage against fire, theft, and natural disasters.",
+      benefits: [
+        "Fire & Natural Disaster Cover",
+        "Theft & Burglary Protection",
+        "Building & Contents Cover",
+        "Business Interruption Cover"
+      ],
+      color: "bg-green-50"
     }
   ];
 
@@ -55,7 +81,15 @@ const LandingPage = () => {
     "ICEA - Travel Insurance",
     "Jubilee - Pension Plan",
     "ICEA - Personal Accident Cover",
-    "Jubilee - Investment Life Plan"
+    "Jubilee - Investment Life Plan",
+    "UAP - Comprehensive Motor Insurance",
+    "UAP - Third Party Motor Cover",
+    "UAP - Motor Fleet Insurance",
+    "UAP - Motorcycle Insurance",
+    "Prudential - Home Insurance",
+    "Prudential - Commercial Property Insurance",
+    "Prudential - Fire Insurance",
+    "Prudential - Business Interruption Cover"
   ];
 
   const handleViewAllProducts = () => {
@@ -87,11 +121,30 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-red-50">
+      {/* Header with Login Button */}
+      <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center">
+              <h1 className="text-2xl font-bold text-red-700">Banksure</h1>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link
+                to="/login"
+                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+              >
+                Login
+              </Link>
+            </div>
+          </div>
+        </div>
+      </header>
+
       {/* Main Landing Content */}
       <div className="max-w-3xl mx-auto py-16 px-4 text-center">
         <h1 className="text-4xl font-bold text-red-700 mb-4">Welcome to Banksure</h1>
         <p className="text-lg text-gray-700 mb-8">
-          The best of <strong>Life</strong> and <strong>Health</strong> insurance from our top partners, <strong>Jubilee</strong> and <strong>ICEA</strong>.
+          The best of <strong>Life</strong>, <strong>Health</strong>, <strong>Motor</strong>, and <strong>Property</strong> insurance from our top partners, <strong>Jubilee</strong>, <strong>ICEA</strong>, <strong>UAP</strong>, and <strong>Prudential</strong>.
         </p>
         <button
           onClick={handleViewAllProducts}
@@ -168,6 +221,7 @@ const LandingPage = () => {
                 value={selectedProduct}
                 onChange={(e) => setSelectedProduct(e.target.value)}
                 className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                aria-label="Available Insurance Products"
               >
                 <option value="">Select a product...</option>
                 {allProducts.map((product, index) => (
@@ -251,6 +305,7 @@ const LandingPage = () => {
                     type="date"
                     required
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                    aria-label="Date of Birth"
                   />
                 </div>
                 <div>
@@ -258,6 +313,7 @@ const LandingPage = () => {
                   <select
                     required
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                    aria-label="Gender"
                   >
                     <option value="">Select gender...</option>
                     <option value="male">Male</option>
@@ -277,18 +333,20 @@ const LandingPage = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Address</label>
-                <textarea
-                  required
-                  rows={3}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                  placeholder="Enter your residential address"
-                ></textarea>
+                  <textarea
+                    required
+                    rows={3}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                    placeholder="Enter your residential address"
+                    aria-label="Address"
+                  ></textarea>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Coverage Amount (UGX)</label>
                 <select
                   required
                   className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                  aria-label="Coverage Amount"
                 >
                   <option value="">Select coverage amount...</option>
                   <option value="10000000">10,000,000</option>
@@ -305,6 +363,7 @@ const LandingPage = () => {
                   rows={4}
                   className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   placeholder="Any additional information or special requirements..."
+                  aria-label="Additional Information"
                 ></textarea>
               </div>
               <div className="flex items-start space-x-3">

@@ -100,8 +100,8 @@ const ClientOnboardingInsurance = () => {
       <aside className="w-64 bg-white shadow-lg">
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center space-x-2">
-            <div className="text-red-600 font-bold text-2xl">✱</div>
-            <span className="text-red-600 font-bold text-xl">logo</span>
+            <div className="text-red-600 font-bold text-2xl"></div>
+            <span className="text-red-600 font-bold text-xl"></span>
           </div>
         </div>
 
@@ -161,10 +161,10 @@ const ClientOnboardingInsurance = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="p-2 hover:bg-gray-100 rounded-lg">
+              <button className="p-2 hover:bg-gray-100 rounded-lg" title="Notifications">
                 <Bell className="h-5 w-5 text-gray-600" />
               </button>
-              <button className="p-2 hover:bg-gray-100 rounded-lg">
+              <button className="p-2 hover:bg-gray-100 rounded-lg" title="Help">
                 <HelpCircle className="h-5 w-5 text-gray-600" />
               </button>
               <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-semibold cursor-pointer">
@@ -291,6 +291,7 @@ const ClientOnboardingInsurance = () => {
                       value={clientData.dateOfBirth}
                       onChange={handleInputChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      aria-label="Date of Birth"
                     />
                   </div>
 
@@ -303,6 +304,7 @@ const ClientOnboardingInsurance = () => {
                       value={clientData.gender}
                       onChange={handleInputChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      aria-label="Gender"
                     >
                       <option value="">Select gender</option>
                       <option value="male">Male</option>
@@ -385,6 +387,7 @@ const ClientOnboardingInsurance = () => {
                       value={clientData.country}
                       onChange={handleInputChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      aria-label="Country"
                     >
                       <option value="">Select country</option>
                       <option value="us">United States</option>
