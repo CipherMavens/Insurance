@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { Shield, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
+// ...inside your LandingPage return...
+<Link
+  to="/login"
+  className="inline-block bg-gray-100 hover:bg-gray-200 text-red-700 px-4 py-2 rounded-lg font-semibold transition-colors"
+>
+  Login
+</Link>
 const LandingPage = () => {
  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showAccountModal, setShowAccountModal] = useState(false);
@@ -81,7 +89,7 @@ const LandingPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-white to-red-50">
       {/* Main Landing Content */}
       <div className="max-w-3xl mx-auto py-16 px-4 text-center">
-        <h1 className="text-4xl font-bold text-red-700 mb-4">Welcome to Bancassurance</h1>
+        <h1 className="text-4xl font-bold text-red-700 mb-4">Welcome to Banksure</h1>
         <p className="text-lg text-gray-700 mb-8">
           The best of <strong>Life</strong> and <strong>Health</strong> insurance from our top partners, <strong>Jubilee</strong> and <strong>ICEA</strong>.
         </p>

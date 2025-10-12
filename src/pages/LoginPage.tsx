@@ -11,7 +11,7 @@ const Login: React.FC<CreateAccountFormProps> = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., API call)
+    // API call)
     console.log({ username, email, password });
   };
 
@@ -22,7 +22,7 @@ const Login: React.FC<CreateAccountFormProps> = () => {
 
         {/* Left Side: Form Section */}
         <div className="w-full lg:w-3/5 p-8 sm:p-12">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8">Create an account</h2>
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8">Login into your workspace</h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             
@@ -81,29 +81,11 @@ const Login: React.FC<CreateAccountFormProps> = () => {
               type="submit"
               className="w-full bg-red-500 text-white py-3 rounded-lg font-bold hover:bg-red-600 transition duration-300 shadow-md"
             >
-              Sign Up
+              Login 
             </button>
           </form>
           
-          {/* Separator and Social Login */}
-          <div className="mt-8 text-center">
-            <p className="text-gray-500 text-sm mb-4">Or sign in with</p>
-            <div className="flex justify-center space-x-4">
-              {/* Google/Red Button */}
-              <button className="p-3 border border-gray-300 rounded-full hover:bg-gray-50 transition duration-150">
-                <span className="text-red-500 font-bold text-xl">G</span>
-              </button>
-              {/* Facebook/Blue Button */}
-              <button className="p-3 border border-gray-300 rounded-full hover:bg-gray-50 transition duration-150">
-                <span className="text-blue-600 font-bold text-xl">f</span>
-              </button>
-              {/* Other/White Button */}
-              <button className="p-3 border border-gray-300 rounded-full hover:bg-gray-50 transition duration-150">
-                <span className="text-gray-500 font-bold text-xl">A</span>
-              </button>
-            </div>
-          </div>
-
+          
         </div>
 
         {/* Right Side: Illustration Section */}
@@ -114,7 +96,7 @@ const Login: React.FC<CreateAccountFormProps> = () => {
           <div className="relative h-full flex items-center justify-center">
             {/* Placeholder for the complex illustration */}
             <p className="text-white text-center font-serif text-2xl rotate-12 opacity-80 select-none">
-                Illustration Area
+                
             </p>
             {/* The line art is too complex to replicate with pure CSS/Tailwind, so this is a textual placeholder. */}
           </div>
