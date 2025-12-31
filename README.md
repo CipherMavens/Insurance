@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+🏦 Bancassurance Agent Policy Management System
+📌 Project Overview
+1. Context, Goals, and Strategic Impact
+🔍 Problem Statement (Current State)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Current bancassurance operations rely heavily on fragmented, paper-based, and manual processes, which result in:
 
-Currently, two official plugins are available:
+Slow processing times during client onboarding and policy servicing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+High error rates due to manual data handling
 
-## React Compiler
+Poor tracking of claims, appeals, and commission statements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Limited real-time visibility for agents, managers, and finance teams
 
-## Expanding the ESLint configuration
+These challenges reduce operational efficiency and limit the scalability of bancassurance operations.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🎯 Business Goal (Proposed Solution)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The goal of this project is to develop a centralized, scalable, and fully digital bancassurance platform that provides end-to-end lifecycle management, including:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Agent registration and management
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Client onboarding
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Policy issuance, servicing, and maturity
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Claims processing and payout
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Commission tracking and reporting
+
+📈 Strategic Impact
+
+The system delivers measurable strategic value by:
+
+Enabling tighter operational control
+
+Significantly reducing processing errors
+
+Improving agent productivity
+
+Providing real-time transparency across departments
+
+Ensuring automated regulatory and compliance alignment
+
+This platform serves as a foundation for accelerating bancassurance revenue growth and future digital expansion.
+Architecture & Technology 
+
+Frontend: React + TypeScript
+Future Enhancements
+
+Payment gateway integration
+
+Advanced analytics dashboards
+
+Email & SMS notifications
+
+Multi-insurer and multi-bank support
+
+Mobile agent application
+
+Run the application
+npm run dev
+
+
+👩‍💻 Author
+
+Brendah Namurema
+Full-Stack Developer
